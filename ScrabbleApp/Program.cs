@@ -6,7 +6,8 @@
         {
             Console.WriteLine("Please Enter A Word For Me To Score:");
             string? wordInp = Console.ReadLine();
-            string[] letters = File.ReadAllLines("./data/input.txt");
+            string letterStr = "AEIOULNRST\nDG\nBCMP\nFHVWY\nK\nJX\nQZ";
+            string[] letters = letterStr.Split("\n");
             Console.WriteLine("The words score is " + Scrabble.GetScore(wordInp, letters));
             Main();
         }
